@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizVerse - Elevate Your Knowledge</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Particle.js Background Container -->
+    <span id="particles-js" aria-hidden="true"></span>
+
+    <header id="navbar">
+        <section class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="brain-circuit" class="logo-icon"></i>
+                <span>QuizVerse</span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="../web-development/index.html" class="nav-link">Web Dev</a>
+                <a href="../General-knowledge/index.html" class="nav-link">GK</a>
+                <a href="../movies/index.html" class="nav-link">Movies</a>
+                <a href="../sports/index.html" class="nav-link">Sports</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+        </section>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <article class="hero-content fade-up">
+                <h1 class="hero-title">Unlock Your <span>True Potential</span></h1>
+                <p class="hero-desc">Challenge yourself with premium quizzes across various domains. Experience learning like never before with smooth, interactive, and beautifully designed tests.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary ripple" onclick="location.href='#categories'">
+                        Start Quiz 
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                </div>
+            </article>
+            <aside class="hero-visual fade-up delay-1">
+                <span class="glass-orb orb-1"></span>
+                <span class="glass-orb orb-2"></span>
+                <figure class="hero-card glass-panel">
+                    <div class="card-header">
+                        <i data-lucide="award" class="card-icon"></i> 
+                        Top Score
+                    </div>
+                    <div class="card-body">
+                        <h2>98%</h2>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress-bar"><div class="progress"></div></div>
+                    </div>
+                </figure>
+            </aside>
+        </section>
+
+        <!-- Subjects Section -->
+        <section class="subjects" id="categories">
+            <div class="section-heading fade-up">
+                <h2>Popular Categories</h2>
+                <p>Choose a topic and start challenging your mind</p>
+            </div>
+            
+            <div class="subject-grid">
+                <!-- Subject Card 1 -->
+                <article class="subject-card glass-panel fade-in delay-1" id="web-dev">
+                    <div class="card-icon-wrapper primary">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Test your skills in HTML, CSS, JavaScript, React, and modern frontend frameworks.</p>
+                    <button class="btn btn-text ripple" onclick="window.location.href='../web-development/index.html'">
+                        Start <i data-lucide="chevron-right"></i>
+                    </button>
+                </article>
+
+                <!-- Subject Card 2 -->
+                <article class="subject-card glass-panel fade-in delay-2" id="gk">
+                    <div class="card-icon-wrapper purple">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>General Knowledge</h3>
+                    <p>Expand your horizons with challenging questions about history, geography, and science.</p>
+                    <button class="btn btn-text ripple" onclick="window.location.href='../General-knowledge/index.html'">
+                        Start <i data-lucide="chevron-right"></i>
+                    </button>
+                </article>
+
+                <!-- Subject Card 3 -->
+                <article class="subject-card glass-panel fade-in delay-3" id="movies">
+                    <div class="card-icon-wrapper pink">
+                        <i data-lucide="clapperboard"></i>
+                    </div>
+                    <h3>Movies</h3>
+                    <p>Dive into cinema trivia, from classic blockbusters to modern indie masterpieces.</p>
+                    <button class="btn btn-text ripple" onclick="window.location.href='../movies/index.html'">
+                        Start <i data-lucide="chevron-right"></i>
+                    </button>
+                </article>
+
+                <!-- Subject Card 4 -->
+                <article class="subject-card glass-panel fade-in delay-4" id="sports">
+                    <div class="card-icon-wrapper green">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h3>Sports</h3>
+                    <p>Prove your passion for football, basketball, tennis, and incredible athletic achievements.</p>
+                    <button class="btn btn-text ripple" onclick="window.location.href='../sports/index.html'">
+                        Start <i data-lucide="chevron-right"></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content glass-panel">
+            <div class="footer-logo">
+                <i data-lucide="brain-circuit"></i>
+                <span>QuizVerse</span>
+            </div>
+            <p>&copy; 2026 QuizVerse Platform. All rights reserved.</p>
+            <nav class="social-links" aria-label="Social Links">
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Github"><i data-lucide="github"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/home/script.js"></script>
+</body>
+</html>

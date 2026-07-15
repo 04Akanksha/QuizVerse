@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz - QuizVerse</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Particle.js Background Container -->
+    <section id="particles-js" aria-hidden="true"></section>
+
+    <header class="navbar" id="navbar">
+        <section class="nav-container">
+            <a href="../home/index.html" class="logo">
+                <i data-lucide="brain-circuit" class="logo-icon"></i>
+                <span>QuizVerse</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link active">Web Dev</a>
+                <a href="../General-knowledge/index.html" class="nav-link">GK</a>
+                <a href="../movies/index.html" class="nav-link">Movies</a>
+                <a href="../sports/index.html" class="nav-link">Sports</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+        </section>
+    </header>
+
+    <main>
+        <div id="main-view">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <article class="hero-content fade-up">
+                    <h1 class="hero-title">Master Your <span>Web Development</span> Skills</h1>
+                    <p class="hero-desc">Test your HTML, CSS, and JavaScript knowledge with interactive quizzes.
+                        Validate your expertise and learn modern web technologies.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary ripple" onclick="location.href='#topics'">
+                            Start Quiz
+                            <i data-lucide="play" class="btn-icon"></i>
+                        </button>
+                    </div>
+                </article>
+                <aside class="hero-visual fade-up delay-1">
+                    <span class="glass-orb orb-1"></span>
+                    <span class="glass-orb orb-2"></span>
+                    <figure class="hero-browser glass-panel">
+                        <div class="browser-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="browser-body">
+                            <pre><code><span class="keyword">const</span> <span class="function">startQuiz</span> = () => {
+  <span class="keyword">return</span> <span class="string">"Ready to code?"</span>;
+};
+<span class="function">startQuiz</span>();</code></pre>
+                        </div>
+                    </figure>
+                </aside>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features" id="features">
+                <div class="section-heading fade-up">
+                    <h2>Quiz Features</h2>
+                    <p>Everything you need to test and improve your skills</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card glass-panel fade-in delay-1">
+                        <i data-lucide="timer" class="feature-icon primary"></i>
+                        <h3>Timer Based Questions</h3>
+                        <p>Challenge yourself against the clock and improve your speed.</p>
+                    </article>
+                    <article class="feature-card glass-panel fade-in delay-2">
+                        <i data-lucide="zap" class="feature-icon purple"></i>
+                        <h3>Instant Score</h3>
+                        <p>Get real-time feedback and detailed answers immediately.</p>
+                    </article>
+                    <article class="feature-card glass-panel fade-in delay-3">
+                        <i data-lucide="trending-up" class="feature-icon pink"></i>
+                        <h3>Progress Tracker</h3>
+                        <p>Save your results and watch your skills grow over time.</p>
+                    </article>
+                    <article class="feature-card glass-panel fade-in delay-4">
+                        <i data-lucide="bar-chart-2" class="feature-icon green"></i>
+                        <h3>Difficulty Levels</h3>
+                        <p>From beginner basics to advanced programming puzzles.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Quiz Topics Section -->
+            <section class="topics" id="topics">
+                <div class="section-heading fade-up">
+                    <h2>Web Dev Topics</h2>
+                    <p>Choose your area of expertise to begin</p>
+                </div>
+
+                <div class="topic-grid">
+                    <article class="topic-card glass-panel fade-up delay-1">
+                        <div class="card-top">
+                            <div class="topic-icon-wrapper html">
+                                <i data-lucide="file-code-2"></i>
+                            </div>
+                            <span class="badge easy">Easy</span>
+                        </div>
+                        <h3>HTML Basics</h3>
+                        <p>Semantic tags, document structure, forms, and accessibility fundamentals.</p>
+                        <div class="topic-meta">
+                            <span><i data-lucide="help-circle"></i> 10 Questions</span>
+                        </div>
+                        <button id="start-html-btn" class="btn btn-outline full-width ripple">Start Quiz</button>
+                    </article>
+
+                    <article class="topic-card glass-panel fade-up delay-2">
+                        <header class="card-top">
+                            <div class="topic-icon-wrapper css">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <span class="badge medium">Medium</span>
+                        </header>
+                        <h3>CSS Styling</h3>
+                        <p>Flexbox, Grid, animations, responsive design, and CSS variables.</p>
+                        <div class="topic-meta">
+                            <span><i data-lucide="help-circle"></i> 10 Questions</span>
+                        </div>
+                        <button id="start-css-btn" class="btn btn-outline full-width ripple">Start Quiz</button>
+                    </article>
+
+                    <article class="topic-card glass-panel fade-up delay-3">
+                        <div class="card-top">
+                            <div class="topic-icon-wrapper js">
+                                <i data-lucide="file-json-2"></i>
+                            </div>
+                            <span class="badge hard">Hard</span>
+                        </div>
+                        <h3>JavaScript Fundamentals</h3>
+                        <p>Closures, promises, ES6+ features, async/await, and scope.</p>
+                        <div class="topic-meta">
+                            <span><i data-lucide="help-circle"></i> 10 Questions</span>
+                        </div>
+                        <button id="start-js-btn" class="btn btn-outline full-width ripple">Start Quiz</button>
+                    </article>
+
+                    <article class="topic-card glass-panel fade-up delay-4">
+                        <div class="card-top">
+                            <div class="topic-icon-wrapper dom">
+                                <i data-lucide="mouse-pointer-click"></i>
+                            </div>
+                            <span class="badge medium">Medium</span>
+                        </div>
+                        <h3>DOM & Events</h3>
+                        <p>Event delegation, bubbling, DOM manipulation, and browser APIs.</p>
+                        <div class="topic-meta">
+                            <span><i data-lucide="help-circle"></i> 10 Questions</span>
+                        </div>
+                        <button id="start-dom-btn" class="btn btn-outline full-width ripple">Start Quiz</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sample Question Preview Section -->
+            <section class="sample-preview fade-up">
+                <div class="section-heading">
+                    <h2>Interactive UI Preview</h2>
+                    <p>Experience our immersive quiz interface</p>
+                </div>
+
+                <article class="preview-container glass-panel">
+                    <header class="preview-header">
+                        <div class="preview-timer">
+                            <i data-lucide="clock"></i> 00:45
+                        </div>
+                        <span class="preview-progress">Question 1 of 10</span>
+                    </header>
+
+                    <div class="question-box">
+                        <h2>Which CSS property is used to change the background color of an element?</h2>
+
+                        <div class="options-grid" id="previewOptions">
+                            <button class="option-btn ripple">A. color</button>
+                            <button class="option-btn ripple selected">B. background-color</button>
+                            <button class="option-btn ripple">C. bgcolor</button>
+                            <button class="option-btn ripple">D. background</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-footer">
+                        <button class="btn btn-outline ripple btn-sm">Skip</button>
+                        <button class="btn btn-primary ripple">
+                            Next <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- Quiz Interface Container -->
+        <section id="quiz-container" class="quiz-section hidden">
+            <article class="quiz-box glass-panel">
+                <div class="quiz-header">
+                    <div class="quiz-topic"><i data-lucide="brain-circuit"></i> <span id="quiz-topic-title">HTML
+                            Basics</span></div>
+                    <div class="quiz-timer">
+                        <div class="timer-bar">
+                            <div id="timer-fill" class="timer-fill"></div>
+                        </div>
+                        <span id="time-text">15s</span>
+                    </div>
+                </div>
+
+                <div class="quiz-progress-wrapper">
+                    <span class="progress-text" id="progress-text">Question 1 / 10</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-body">
+                    <h2 id="question-text">Loading question...</h2>
+                    <div class="options-grid" id="options-container">
+                        <!-- Options injected via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quiz-footer">
+                    <button id="next-btn" class="btn btn-primary ripple full-width disabled">
+                        Next <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Result Container -->
+        <section id="result-container" class="result-section hidden">
+            <article class="result-box glass-panel">
+                <div class="result-header">
+                    <h2>Quiz Completed!</h2>
+                    <p id="high-score-text">Last Best Score: -/-</p>
+                </div>
+
+                <div class="score-circle">
+                    <div class="score-text">
+                        <span id="final-score">0</span>
+                        <small>/ 10</small>
+                    </div>
+                </div>
+
+                <p class="accuracy-text">Accuracy: <span id="accuracy-percent">0%</span></p>
+
+                <figure class="meme-container">
+                    <img id="meme-image" src="" alt="Result Meme" class="meme-img glass-panel">
+                    <figcaption id="meme-text" class="meme-caption"></figcaption>
+                </figure>
+
+                <div class="result-stats">
+                    <div class="stat"><i data-lucide="check-circle" class="green"></i> <span id="stat-correct">0</span>
+                        Correct</div>
+                    <div class="stat"><i data-lucide="x-circle" class="red"></i> <span id="stat-wrong">0</span> Wrong
+                    </div>
+                    <div class="stat"><i data-lucide="minus-circle" class="yellow"></i> <span id="stat-skipped">0</span>
+                        Skipped</div>
+                </div>
+
+                <div class="result-actions">
+                    <button id="retry-btn" class="btn btn-primary ripple">
+                        <i data-lucide="rotate-ccw"></i> Retry Quiz
+                    </button>
+                    <button id="home-btn" class="btn btn-outline ripple">
+                        Back to Topics <i data-lucide="home"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-content glass-panel">
+            <div class="footer-logo">
+                <i data-lucide="brain-circuit"></i>
+                <span>QuizVerse</span>
+            </div>
+            <p>&copy; 2026 QuizVerse Platform. All rights reserved.</p>
+            <nav class="social-links" aria-label="Social Links">
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="Github"><i data-lucide="github"></i></a>
+            </nav>
+        </section>
+    </footer>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
